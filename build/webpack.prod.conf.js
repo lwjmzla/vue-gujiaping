@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-// !引入
+// !引入骨架
 const MyPlugin = require('./MyPlugin.js')
 
 const env = require('../config/prod.env')
@@ -76,7 +76,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
-    // !引入
+    // !引入骨架
     new MyPlugin({
       test: 'xxxx'
     }),
